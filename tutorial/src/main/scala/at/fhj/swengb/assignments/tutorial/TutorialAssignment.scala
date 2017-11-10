@@ -10,7 +10,7 @@ object TutorialAssignment {
   /**
     * Complete this implementation by executing the corresponding spec.
     */
-  def attribute = ???
+  def attribute = 42
 
 }
 
