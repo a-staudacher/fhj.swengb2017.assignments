@@ -103,15 +103,13 @@ object FunctionalAssignment {
   // it also provides a convenience constructor in order to instantiate a MyList without hassle
   object MyList {
 
-    def sum[Int](list: MyList[Int]): Int = ???
+    def sum(list: MyList[Int]): Int = ???
 
-    def product[Int](list: MyList[Int]): Int = ???
+    def product(list: MyList[Int]): Int = ???
 
     def apply[A](as: A*): MyList[A] = {
-      as match {
-        case Nil => MyNil
-        case h :: tl => Cons(h, apply(tl: _*))
-      }
+      if (as.isEmpty) MyNil
+      else Cons(as.head, apply(as.tail: _*))
     }
 
   }

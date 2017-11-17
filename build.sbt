@@ -14,7 +14,6 @@ lazy val assignments = (project in file(".")).
   )
 
 // ------------------------------------------------------
-// common
 lazy val tutorial = (project in file("tutorial/")).
   settings(
     organization := org,
@@ -25,7 +24,15 @@ lazy val tutorial = (project in file("tutorial/")).
     fork := true
   )
 
-
+lazy val tree = (project in file("tree/")).
+  settings(
+    organization := org,
+    scalaVersion := scalaVer,
+    version := buildVer,
+    name := "tree",
+    libraryDependencies += scalaTest,
+    fork := true
+  )
 
 lazy val functional = (project in file("functional/")).
  settings(
