@@ -37,7 +37,7 @@ object FunctionalAssignment {
     * of the list as. The result of this function then becomes the first parameter of again the function fn and the
     * second parameter of fn will be the second element of the list. The result of this will then again be the first
     * parameter of the function fn and so on. This continues until we reach the last element of as where then the result
-    * of the function fn is the endresult of our function op.
+    * of the function fn is the endresult of the function op.
     *
     * @param as InputList : The list which gets reduced to some value with the function fn
     * @param b  Accumulator: The value that gets used as the first parameter of fn when fn gets used the first time.
