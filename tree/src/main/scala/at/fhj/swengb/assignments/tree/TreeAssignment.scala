@@ -39,7 +39,10 @@ object Graph {
     * @param convert a converter function
     * @return
     */
-  def traverse[A, B](tree: Tree[A])(convert: A => B): Seq[B] =  ???
+  def traverse[A, B](tree: Tree[A])(convert: A => B): Seq[B] = tree match {
+    case Branch(left:Tree[A], right:Tree[A]) => traverse(left)(convert) ++  traverse(right)(convert)
+    case Node(value:A) => Seq(convert(value))
+  }
 
 
   /**
@@ -61,12 +64,35 @@ object Graph {
               treeDepth: Int,
               factor: Double = 0.75,
               angle: Double = 45.0,
-              colorMap: Map[Int, Color] = Graph.colorMap): Tree[L2D] = ???
+              colorMap: Map[Int, Color] = Graph.colorMap): Tree[L2D] = {
+    require((treeDepth + 1) <= colorMap.size && treeDepth >= 0 )
 
+    val root = Node(L2D(start, initialAngle, length, colorMap(0)))
+
+    def createBranch(leaf: Node[L2D], factor: Double, angle: Double, color: Color): Branch[L2D] = {
+      Branch(leaf, Branch(Node(leaf.value.left(factor, angle, color)), Node(leaf.value.right(factor, angle, color))))
+    }
+
+    def createTree(accTree: Tree[L2D], curDepth: Int, maxDepth: Int): Tree[L2D] = {
+      def nextLevel(tree: Tree[L2D], currLevel: Int): Branch[L2D] = {
+        tree match {
+          case Node(root) => createBranch(Node(root), factor, angle, colorMap(currLevel))
+          case Branch(Node(root), Branch(Node(left), Node(right))) =>
+            Branch(Node(root), Branch(createBranch(Node(left), factor, angle, colorMap(currLevel)),
+                                      createBranch(Node(right), factor, angle, colorMap(currLevel))))
+          case Branch(Node(root), Branch(left, right)) =>
+            Branch(Node(root), Branch(nextLevel(left, curDepth + 1), nextLevel(right, curDepth + 1)))
+        }
+      }
+      if (curDepth == maxDepth)
+        accTree
+      else
+        createTree(nextLevel(accTree, curDepth), curDepth + 1, maxDepth)
+    }
+    if (treeDepth==0) root
+    else createTree(root, 0, treeDepth)
+  }
 }
-
-
-
 
 object L2D {
 
