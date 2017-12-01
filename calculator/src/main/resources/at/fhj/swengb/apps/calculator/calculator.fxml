@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<GridPane id="calculator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="500.0" prefWidth="500.0" styleClass="gridpane" xmlns="http://javafx.com/javafx/null"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.calculator.CalculatorFxController">
+    <children>
+    <Button mnemonicParsing="false" onAction="#sgn" prefHeight="100.0" prefWidth="100.0" styleClass="grey"
+            text="+/-" GridPane.columnIndex="2" GridPane.rowIndex="2">
+
+    </Button>
+    </children>
+
+</GridPane>

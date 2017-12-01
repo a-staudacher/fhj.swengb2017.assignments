@@ -1,0 +1,10 @@
+// see https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+// see http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
+
+#calculator {
+	-fx-background-color:#00ff00;
+}
+
+#calculator .grey {
+	-fx-background-color:#ff00ff;
+}

@@ -2,16 +2,6 @@ import sbt._
 import Dependencies._
 import BuildConstants._
 
-// ------------------------------------------------------
-// main project
-lazy val assignments = (project in file(".")).
-  settings(
-    organization := org,
-    scalaVersion := scalaVer,
-    version := buildVer,
-    name := "assignments",
-    libraryDependencies += scalaTest
-  )
 
 // ------------------------------------------------------
 lazy val tutorial = (project in file("tutorial/")).
@@ -35,7 +25,7 @@ lazy val tree = (project in file("tree/")).
   )
 
 lazy val functional = (project in file("functional/")).
- settings(
+  settings(
     organization := org,
     scalaVersion := scalaVer,
     version := buildVer,
@@ -44,3 +34,23 @@ lazy val functional = (project in file("functional/")).
     fork := true
   )
 
+lazy val calculator = (project in file("calculator/")).
+  settings(
+    organization := org,
+    scalaVersion := scalaVer,
+    version := buildVer,
+    name := "calculator",
+    libraryDependencies += scalaTest,
+    fork := true
+  )
+
+// ------------------------------------------------------
+// main project
+lazy val assignments = (project in file(".")).
+  settings(
+    organization := org,
+    scalaVersion := scalaVer,
+    version := buildVer,
+    name := "assignments",
+    libraryDependencies += scalaTest
+  ).aggregate(tutorial, functional, tree, calculator)
