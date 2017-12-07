@@ -8,10 +8,12 @@
           prefHeight="500.0" prefWidth="500.0" styleClass="gridpane" xmlns="http://javafx.com/javafx/null"
           xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.calculator.CalculatorFxController">
     <children>
-    <Button mnemonicParsing="false" onAction="#sgn" prefHeight="100.0" prefWidth="100.0" styleClass="grey"
-            text="+/-" GridPane.columnIndex="2" GridPane.rowIndex="2">
+        <Button mnemonicParsing="false" onAction="#sgn" prefHeight="100.0" prefWidth="100.0" styleClass="grey"
+                text="+/-" GridPane.columnIndex="2" GridPane.rowIndex="2">
 
-    </Button>
+        </Button>
+
+        <TextField fx:id="numberTextField" text="123" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
     </children>
 
 </GridPane>

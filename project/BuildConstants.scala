@@ -8,5 +8,5 @@ object Dependencies {
 object BuildConstants {
   val org: String = "at.fh-joanneum.ima"
   val buildVer = "2017.0.4-SNAPSHOT"
-  val scalaVer = "2.12.3"
+  val scalaVer = "2.12.4"
 }

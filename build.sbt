@@ -44,6 +44,16 @@ lazy val calculator = (project in file("calculator/")).
     fork := true
   )
 
+lazy val csp = (project in file("csp/")).
+  settings(
+    organization := org,
+    scalaVersion := scalaVer,
+    version := buildVer,
+    name := "csp",
+    libraryDependencies += scalaTest,
+    fork := true
+  )
+
 // ------------------------------------------------------
 // main project
 lazy val assignments = (project in file(".")).
@@ -53,4 +63,4 @@ lazy val assignments = (project in file(".")).
     version := buildVer,
     name := "assignments",
     libraryDependencies += scalaTest
-  ).aggregate(tutorial, functional, tree, calculator)
+  ).aggregate(tutorial, functional, tree, calculator, csp)

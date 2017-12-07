@@ -1,6 +1,5 @@
 == Time expenditure: Calculator assignment
 
-
 [cols="1,1,4", options="header"]
 .Time expenditure
 |===
@@ -19,7 +18,5 @@
 | 11.07.17
 | 2
 | fixed bugs
-
-
 
 |===
