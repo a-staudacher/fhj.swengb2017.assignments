@@ -7,13 +7,13 @@
 | Hours
 | Description
 
-| 29.11.17
-| 1
-| Review of this and that
+| 08.12.17
+| 3
+| All tests from RpnCalculatorSpec passed
 
-| 30.11.17
-| 5
-| implemented css
+| 10.12.17
+| 4
+| Made GUI
 
 | 11.07.17
 | 2
