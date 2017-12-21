@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package at.fhj.swengb.apps.battleship;
+
+option java_package         = "at.fhj.swengb.apps.battleship";
+option java_outer_classname = "BattleShipProtobuf";
+
+
+message BattleShipGame {
+
+    // TODO
+
+}

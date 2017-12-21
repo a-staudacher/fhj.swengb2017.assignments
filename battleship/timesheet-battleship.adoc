@@ -1,0 +1,30 @@
+== Time expenditure: battleship assignment
+
+[cols="1,1,1, 1,4", options="header"]
+.Time expenditure
+|===
+| Student
+| Date
+| Estimated Hours
+| Actual Hours
+| Description
+
+| Arneitzj15
+| 29.11.17
+| 2
+| 1
+| Review of this and that
+
+| Arneitzj15
+| 30.11.17
+| 1
+| 5
+| implemented css
+
+| Heiderst16
+| 11.07.17
+| 2
+| 2
+| fixed bugs
+
+|===
