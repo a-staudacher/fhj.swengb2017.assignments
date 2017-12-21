@@ -27,8 +27,8 @@
         <VBox prefHeight="392.0" prefWidth="138.0" BorderPane.alignment="CENTER">
             <children>
                 <Button id="button" fx:id="button" onAction="#newGame" prefHeight="27.0" prefWidth="142.0" text="New Game" />
-            <Button id="button" fx:id="button1" prefHeight="27.0" prefWidth="142.0" text="Load Game" />
-            <Button id="button" fx:id="button11" prefHeight="27.0" prefWidth="142.0" text="Save Game" />
+            <Button id="button" fx:id="button1" onAction="#loadGame" prefHeight="27.0" prefWidth="142.0" text="Load Game" />
+            <Button id="button" fx:id="button11" onAction="#saveGame" prefHeight="27.0" prefWidth="142.0" text="Save Game" />
             </children>
         </VBox>
     </right>
@@ -64,6 +64,6 @@
         <TextArea fx:id="log" prefHeight="489.0" prefWidth="128.0" BorderPane.alignment="CENTER" />
    </left>
    <bottom>
-      <Slider prefHeight="69.0" prefWidth="752.0" BorderPane.alignment="CENTER" />
+      <Slider fx:id="slider" max="10.0" onMouseDragged="#slided" prefHeight="69.0" prefWidth="752.0" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

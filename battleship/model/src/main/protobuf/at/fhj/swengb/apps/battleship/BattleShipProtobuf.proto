@@ -7,9 +7,8 @@ option java_outer_classname = "BattleShipProtobuf";
 
 
 message BattleShipGame {
-
-    // TODO
     BattleField battleField = 1;
+    repeated Pos clickedCells = 4;
 }
 
 message BattleField {

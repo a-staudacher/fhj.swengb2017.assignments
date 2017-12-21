@@ -2,6 +2,7 @@ package at.fhj.swengb.apps.battleship.model
 
 import javafx.scene.paint.Color
 import javafx.scene.shape.Rectangle
+import at.fhj.swengb.apps.battleship._
 ;
 
 /**
@@ -14,6 +15,7 @@ case class BattleFxCell(pos: BattlePos
                         , log: String => Unit
                         , someVessel: Option[Vessel] = None
                         , fn: (Vessel, BattlePos) => Unit
+                        , hit: (BattlePos) => Unit
                         ) extends Rectangle(width, height) {
 
   def init(): Unit = {
@@ -25,6 +27,7 @@ case class BattleFxCell(pos: BattlePos
   }
 
   setOnMouseClicked(e => {
+    hit(pos)
     someVessel match {
       case None =>
         log(s"Missed. Just hit water.")

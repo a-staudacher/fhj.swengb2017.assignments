@@ -15,6 +15,9 @@ case class BattleShipGame(battleField: BattleField,
     **/
   var hits: Map[Vessel, Set[BattlePos]] = Map()
 
+
+  var clickedCells : List[BattlePos] = List()
+
   /**
     * contains all vessels which are destroyed
     */
@@ -31,7 +34,19 @@ case class BattleShipGame(battleField: BattleField,
       getCellHeight(y),
       log,
       battleField.fleet.findByPos(pos),
-      updateGameState)
+      updateGameState,
+      hit)
+  }
+
+  def hit(pos:BattlePos):Unit = clickedCells = clickedCells :+ pos
+
+  def refresh(x:Int) : Unit = {
+    println("refresh")
+    println(clickedCells.toString())
+    clickedCells.take(x).foreach((pos) => {
+      println("shot " ++ pos.toString)
+      cells(pos.x*battleField.width + pos.y).getOnMouseClicked().handle(null)
+    })
   }
 
   def getCells(): Seq[BattleFxCell] = cells

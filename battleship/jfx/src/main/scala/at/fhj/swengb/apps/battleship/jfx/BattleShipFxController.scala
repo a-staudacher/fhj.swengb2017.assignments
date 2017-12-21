@@ -1,11 +1,14 @@
 package at.fhj.swengb.apps.battleship.jfx
 
 import java.net.URL
+import java.nio.file._
 import java.util.ResourceBundle
 import javafx.fxml.{FXML, Initializable}
-import javafx.scene.control.TextArea
+import javafx.scene.control.{Slider, TextArea}
 import javafx.scene.layout.GridPane
 
+import at.fhj.swengb.apps.battleship.BattleShipProtobuf
+import at.fhj.swengb.apps.battleship.BattleShipProtocol._
 import at.fhj.swengb.apps.battleship.model.{BattleField, BattleShipGame, Fleet, FleetConfig}
 
 
@@ -13,14 +16,45 @@ class BattleShipFxController extends Initializable {
 
 
   @FXML private var battleGroundGridPane: GridPane = _
+  var bsGame: BattleShipGame = _
 
   /**
     * A text area box to place the history of the game
     */
   @FXML private var log: TextArea = _
 
-  @FXML
+  @FXML private var slider: Slider = _
   def newGame(): Unit = initGame()
+
+  def saveGame(): Unit = {
+    val pGame: BattleShipProtobuf.BattleShipGame = convert(bsGame)
+
+    val path = Paths.get("target/BattleShipProtobuf.bin")
+    val outstream = Files.newOutputStream(path)
+
+    pGame.writeTo(outstream)
+
+    println("Wrote to " + path.toAbsolutePath.toString)
+  }
+
+  def slided(): Unit = {
+    init(bsGame);
+    bsGame.refresh(slider.getValue.toInt)
+    println(slider.getValue.toString)
+    println(slider.getValue.toInt.toString)
+  }
+
+  def loadGame(): Unit = {
+    val path = Paths.get("target/BattleShipProtobuf.bin")
+    val in = Files.newInputStream(path)
+
+    val protoGame: BattleShipProtobuf.BattleShipGame = BattleShipProtobuf.BattleShipGame.parseFrom(in)
+    val a = BattleShipGame(convert(protoGame).battleField, getCellWidth, getCellHeight, appendLog)
+    a.clickedCells = convert(protoGame).clickedCells
+    init(a)
+    println("Read Game from disc")
+    bsGame.refresh(bsGame.clickedCells.length)
+  }
 
   override def initialize(url: URL, rb: ResourceBundle): Unit = initGame()
 
@@ -40,6 +74,7 @@ class BattleShipFxController extends Initializable {
     *
     */
   def init(game : BattleShipGame) : Unit = {
+    bsGame = game
     battleGroundGridPane.getChildren.clear()
     for (c <- game.getCells) {
       battleGroundGridPane.add(c, c.pos.x, c.pos.y)
