@@ -1,0 +1,49 @@
+// see https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+// see http://fxexperience.com/2011/12/styling-fx-buttons-with-css/
+
+#battleship {
+	//-fx-background-color:#00ff00;
+}
+
+.button1 {
+    -fx-color:#E5B50D;
+}
+
+.button1:hover {
+    -fx-color:#FBCD2F;
+}
+.button1:pressed {
+    -fx-color:#DE7500;
+}
+
+.button2 {
+    -fx-color:#2C8FF2;
+    -fx-border-color:#0014ED;
+}
+
+.button2:hover {
+    -fx-color:#76B5F5;
+}
+.button2:pressed {
+    -fx-color:#0A6ED1;
+}
+
+.button3 {
+    -fx-color:#17AE04;
+}
+
+.button3:hover {
+    -fx-color:#41FF00;
+}
+.button3:pressed {
+    -fx-color:#098A09;
+}
+
+
+.gridpane {
+    -fx-background-color:#CFF6F4;
+    -fx-border-color:#0014ED;
+}
+.battleship{
+    -fx-background-image: url("abgenutzte-holzplanken-textur-001.jpg");
+}

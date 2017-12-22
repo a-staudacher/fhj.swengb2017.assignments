@@ -21,4 +21,11 @@
 | 2
 | implemented load&save button and slider
 
+| gartnerf15
+| 21.12.17
+| 2
+| 2
+| CSS
+
+
 |===
