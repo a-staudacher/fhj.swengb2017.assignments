@@ -5,29 +5,30 @@ package at.fhj.swengb.apps.battleship;
 option java_package         = "at.fhj.swengb.apps.battleship";
 option java_outer_classname = "BattleShipProtobuf";
 
-
+// Used pretty much the same structrure as the battleshipgame
+// I added the clickedCells List to save which cells have been clicked and reconstructed the game after loading
 message BattleShipGame {
     BattleField battleField = 1;
     repeated Pos clickedCells = 4;
 }
-
+// A battlefield has a width a height and a fleet
 message BattleField {
     int32 width = 1;
     int32 height = 2;
     Fleet fleet = 3;
 }
-
+// This fleet contains the list of all the vessels that can and must be shot to win the game
 message Fleet {
     repeated Vessel vessel = 1;
 }
-
+// A vessel has a name, position, direction and size
 message Vessel {
     string name = 1;
     Pos startPos = 2;
     string direction = 3;
     int32 size = 4;
 }
-
+// A position has a x and y coordinate
 message Pos {
     int32 x = 1;
     int32 y = 2;
