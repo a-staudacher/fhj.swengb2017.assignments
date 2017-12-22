@@ -74,6 +74,6 @@
         <TextArea fx:id="log" prefHeight="489.0" prefWidth="128.0" BorderPane.alignment="CENTER" />
    </left>
    <bottom>
-      <Slider fx:id="slider" max="10.0" onMouseDragged="#slided" prefHeight="69.0" prefWidth="752.0" BorderPane.alignment="CENTER" />
+      <Slider fx:id="slider" max="1.0" onMouseDragged="#slided" prefHeight="69.0" prefWidth="752.0" value="1.0" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

@@ -49,11 +49,12 @@ class BattleShipFxController extends Initializable {
     val in = Files.newInputStream(path)
 
     val protoGame: BattleShipProtobuf.BattleShipGame = BattleShipProtobuf.BattleShipGame.parseFrom(in)
-    val a = BattleShipGame(convert(protoGame).battleField, getCellWidth, getCellHeight, appendLog)
+    val a = BattleShipGame(convert(protoGame).battleField, getCellWidth, getCellHeight, appendLog, updateSlider)
     a.clickedCells = convert(protoGame).clickedCells
     init(a)
     println("Read Game from disc")
     bsGame.refresh(bsGame.clickedCells.length)
+    slider.setMax(bsGame.clickedCells.length)
   }
 
   override def initialize(url: URL, rb: ResourceBundle): Unit = initGame()
@@ -82,6 +83,12 @@ class BattleShipFxController extends Initializable {
     game.getCells().foreach(c => c.init)
   }
 
+  private def updateSlider(x:Int):Unit = {
+    slider.setMax(x)
+    slider.setValue(x)
+    println("x:" ++ x.toString())
+  }
+
 
   private def initGame(): Unit = {
     val game: BattleShipGame = createGame()
@@ -94,7 +101,7 @@ class BattleShipFxController extends Initializable {
 
     val battleField: BattleField = BattleField.placeRandomly(field)
 
-    BattleShipGame(battleField, getCellWidth, getCellHeight, appendLog)
+    BattleShipGame(battleField, getCellWidth, getCellHeight, appendLog, updateSlider)
   }
 
 }

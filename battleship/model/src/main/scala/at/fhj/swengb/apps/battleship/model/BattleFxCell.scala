@@ -33,7 +33,7 @@ case class BattleFxCell(pos: BattlePos
         log(s"Missed. Just hit water.")
         setFill(Color.AQUAMARINE)
       case Some(v) =>
-        // log(s"Hit an enemy vessel!")
+        log(s"Hit an enemy vessel!")
         fn(v, pos)
         setFill(Color.RED)
     }

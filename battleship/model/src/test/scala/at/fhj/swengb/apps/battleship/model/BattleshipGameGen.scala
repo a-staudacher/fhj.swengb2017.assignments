@@ -16,5 +16,5 @@ object BattleshipGameGen {
 
   val battleShipGameGen: Gen[BattleShipGame] = for {
     battlefield <- Battlefield
-  } yield BattleShipGame(battlefield, (x => x.toDouble), (x => x.toDouble), (x => ()))
+  } yield BattleShipGame(battlefield, (x => x.toDouble), (x => x.toDouble), (x => ()),(x=>()))
 }

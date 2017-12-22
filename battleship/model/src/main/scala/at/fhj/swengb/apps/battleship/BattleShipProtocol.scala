@@ -21,7 +21,7 @@ object BattleShipProtocol {
     val height = g.getBattleField.getHeight
     val fleet = g.getBattleField.getFleet.getVesselList.asScala.map(convert).toSet
     val battleField: BattleField = BattleField(width,height,Fleet(fleet))
-    val game = BattleShipGame(battleField, ((x:Int) => x.toDouble), ((x:Int) => x.toDouble),(x=>()))
+    val game = BattleShipGame(battleField, ((x:Int) => x.toDouble), ((x:Int) => x.toDouble),(x=>()), (x=>()))
     g.getClickedCellsList.asScala.map(convert).foreach(game.hit)
     game
   }
