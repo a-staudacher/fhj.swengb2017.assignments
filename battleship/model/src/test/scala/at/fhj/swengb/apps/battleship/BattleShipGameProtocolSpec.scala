@@ -21,3 +21,5 @@ class BattleShipProtocolSpec extends WordSpecLike {
     }
   }
 }
+
+
