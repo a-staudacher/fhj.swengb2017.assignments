@@ -10,7 +10,8 @@ case class BattleShipGame(battleField: BattleField,
                           getCellWidth: Int => Double,
                           getCellHeight: Int => Double,
                           log: String => Unit,
-                          updateSlider: Int => Unit) {
+                          updateSlider: Int => Unit,
+                          onClick : () => Boolean) {
 
   /**
     * remembers which vessel was hit at which position
@@ -39,7 +40,8 @@ case class BattleShipGame(battleField: BattleField,
       log,
       battleField.fleet.findByPos(pos),
       updateGameState,
-      hit)
+      hit,
+      onClick)
   }
 
   def hit(pos:BattlePos):Unit = {

@@ -32,4 +32,10 @@ case class TCP(sock:Socket,p:Int) {
     os.println(msg)
     os.flush()
   }
+  def sendEditFin():Unit = {}
+  def shot(x:Int,y:Int):Unit = {}
+  def sendHit():Unit = {}
+  def sendMiss():Unit = {}
+  def sendShipDestroyed():Unit = {}
+  def readyRead:Boolean = {true}
 }
