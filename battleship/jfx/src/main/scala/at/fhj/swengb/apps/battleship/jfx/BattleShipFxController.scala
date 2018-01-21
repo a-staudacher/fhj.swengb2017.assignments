@@ -89,7 +89,7 @@ class BattleShipFxController extends Initializable {
   private def initEdit():BattleShipGame = {
     val field = BattleField(10, 10, Fleet.Empty)
     val battleField: BattleField = BattleField.placeRandomly(field)
-    BattleShipGame(battleField, getCellWidth, getCellHeight, appendLog, (x:Int)=>(),onClickEdit)
+    BattleShipGame(getCellWidth, getCellHeight)
   }
 
   def onClickEdit():Boolean ={

@@ -13,34 +13,40 @@ import at.fhj.swengb.apps.battleship.model.{BattleField, BattleShipGame, Fleet, 
 
 import scala.util.{Failure, Success, Try}
 
-
+object BattleShipFxEditController {
+}
 class BattleShipFxEditController extends Initializable {
   @FXML private var btn_ship1:Button =_
   @FXML private var btn_ship2:Button =_
   @FXML private var btn_ship3:Button =_
+  @FXML private var btn_ready:Button =_
+  @FXML private var battleGroundGridPane: GridPane = _
 
-  var shipType: Int = 0
-  var horizontal: Boolean = true
-  var nrShip1: Int = 3
-  var nrShip2: Int = 2
-  var nrShip3: Int = 1
 
-  override def initialize(url: URL, rb: ResourceBundle): Unit = {}
+
+  override def initialize(url: URL, rb: ResourceBundle): Unit = {
+    BattleShipGame.editMode = true
+    initGameField()
+    BattleShipGame.nrShip1 = 3
+    BattleShipGame.nrShip2 = 2
+    BattleShipGame.nrShip3= 1
+    bt_ship1()
+  }
   def bt_ready():Unit = {}
   def bt_ship1():Unit = {
-    shipType = 1
-    horizontal = !horizontal
+    BattleShipGame.shipType = 1
+    BattleShipGame.horizontal = !BattleShipGame.horizontal
     // change color
     changeBtn(btn_ship1)
   }
   def bt_ship2():Unit = {
-    shipType = 2
-    horizontal = !horizontal
+    BattleShipGame.shipType = 2
+    BattleShipGame.horizontal = !BattleShipGame.horizontal
     changeBtn(btn_ship2)
   }
   def bt_ship3():Unit = {
-    shipType = 3
-    horizontal = !horizontal
+    BattleShipGame.shipType = 3
+    BattleShipGame.horizontal = !BattleShipGame.horizontal
     changeBtn(btn_ship3)
   }
   def bt_back() :Unit = {
@@ -57,9 +63,23 @@ class BattleShipFxEditController extends Initializable {
     btn_ship2.getStyleClass.remove("button3")
     btn_ship3.getStyleClass.remove("button2")
     btn_ship3.getStyleClass.remove("button3")
-    if(horizontal)
+    if(BattleShipGame.horizontal)
       button.getStyleClass.add("button2")
     else
       button.getStyleClass.add("button3")
   }
+
+  def initGameField():Unit = {
+    BattleShipFxApp.bsGame=BattleShipGame(getCellWidth, getCellHeight)
+
+    battleGroundGridPane.getChildren.clear()
+
+    for (c <- BattleShipFxApp.bsGame.getCells) {
+      battleGroundGridPane.add(c, c.pos.x, c.pos.y)
+    }
+    BattleShipFxApp.bsGame.getCells().foreach(c => c.init)
+  }
+
+  private def getCellHeight(y: Int): Double = battleGroundGridPane.getRowConstraints.get(y).getPrefHeight
+  private def getCellWidth(x: Int): Double = battleGroundGridPane.getColumnConstraints.get(x).getPrefWidth
 }

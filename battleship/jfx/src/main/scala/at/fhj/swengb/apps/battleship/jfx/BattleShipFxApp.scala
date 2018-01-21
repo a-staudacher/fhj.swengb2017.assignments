@@ -5,6 +5,9 @@ import javafx.fxml.FXMLLoader
 import javafx.scene.{Parent, Scene}
 import javafx.stage.Stage
 
+import at.fhj.swengb.apps.battleship.TCP
+import at.fhj.swengb.apps.battleship.model.{BattleField, BattleShipGame}
+
 import scala.util.{Failure, Success, Try}
 
 object BattleShipFxApp {
@@ -18,6 +21,9 @@ object BattleShipFxApp {
   var HighscoreS: Scene = _
   var ReplayS: Scene = _
   var CreditS: Scene = _
+  var bsGame: BattleShipGame = _
+  //val enemyBattleField: BattleField = _
+  var tcpConnection : TCP = _
 
   def main(args: Array[String]): Unit = {
     Application.launch(classOf[BattleShipFxApp], args: _*)
@@ -47,7 +53,7 @@ class BattleShipFxApp extends Application {
 
     BattleShipFxApp.rootStage = stage
     //BattleShipFxApp.loadScene(BattleShipFxApp.SplashS,BattleShipFxApp.rootStage)
-    BattleShipFxApp.loadScene(BattleShipFxApp.MenuS,BattleShipFxApp.rootStage)
+    BattleShipFxApp.loadScene(BattleShipFxApp.EditS,BattleShipFxApp.rootStage)
   }
   override def init(): Unit = {
     BattleShipFxApp.SplashS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipsplaschscreen.fxml")

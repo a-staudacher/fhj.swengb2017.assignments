@@ -12,19 +12,21 @@ import at.fhj.swengb.apps.battleship._
 case class BattleFxCell(pos: BattlePos
                         , width: Double
                         , height: Double
-                        , log: String => Unit
-                        , someVessel: Option[Vessel] = None
+                        , var someVessel: Option[Vessel] = None
                         , fn: (Vessel, BattlePos) => Unit
                         , hit: (BattlePos) => Unit
-                        , onClick:() => Boolean
-                        ) extends Rectangle(width, height) {
+                        , placeVessel: (BattlePos)=>Unit) extends Rectangle(width, height) {
 
   def init(): Unit = {
-    if (someVessel.isDefined) {
+    if (someVessel.isDefined && BattleShipGame.editMode) {
       setFill(Color.YELLOWGREEN)
     } else {
       setFill(Color.BLUE)
     }
+  }
+
+  def updateEdit():Unit={
+
   }
 
   setOnMouseClicked(e => {
@@ -38,7 +40,9 @@ case class BattleFxCell(pos: BattlePos
         fn(v, pos)
         setFill(Color.RED)
     }*/
-    onClick()
+    if(BattleShipGame.editMode) {
+      placeVessel(pos)
+    }
   })
 
 }
