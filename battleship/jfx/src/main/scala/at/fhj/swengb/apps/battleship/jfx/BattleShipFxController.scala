@@ -3,13 +3,17 @@ package at.fhj.swengb.apps.battleship.jfx
 import java.net.URL
 import java.nio.file._
 import java.util.ResourceBundle
-import javafx.fxml.{FXML, Initializable}
+import javafx.fxml.{FXML, FXMLLoader, Initializable}
+import javafx.scene.{Parent, Scene}
 import javafx.scene.control.{Slider, TextArea}
 import javafx.scene.layout.GridPane
+import javafx.stage.Stage
 
-import at.fhj.swengb.apps.battleship.BattleShipProtobuf
+import at.fhj.swengb.apps.battleship.{BattleShipProtobuf, TCP}
 import at.fhj.swengb.apps.battleship.BattleShipProtocol._
 import at.fhj.swengb.apps.battleship.model.{BattleField, BattleShipGame, Fleet, FleetConfig}
+
+import scala.util.{Failure, Success, Try}
 
 
 class BattleShipFxController extends Initializable {
@@ -17,44 +21,47 @@ class BattleShipFxController extends Initializable {
 
   @FXML private var battleGroundGridPane: GridPane = _
   var bsGame: BattleShipGame = _
-
+  // 0 no ship selected, 1 ship 1 selected, 2 ship 2 selected, 3 ship 3 selected
+  var shipType: Int = 0
+  var horizontal: Boolean = true
+  var nrShip1: Int = 3
+  var nrShip2: Int = 2
+  var nrShip3: Int = 1
+  var tcp : TCP = _
   /**
     * A text area box to place the history of the game
     */
   @FXML private var log: TextArea = _
 
-  @FXML private var slider: Slider = _
+
   def newGame(): Unit = initGame()
 
-  def saveGame(): Unit = {
-    val pGame: BattleShipProtobuf.BattleShipGame = convert(bsGame)
-
-    val path = Paths.get("target/BattleShipProtobuf.bin")
-    val outstream = Files.newOutputStream(path)
-
-    pGame.writeTo(outstream)
-
-    println("Wrote to " + path.toAbsolutePath.toString)
+  def ship1(): Unit = {
+    shipType = 1
+    horizontal = !horizontal
+    // change color
+  }
+  def ship2(): Unit = {
+    shipType = 2
+    horizontal = !horizontal
+  }
+  def ship3(): Unit = {
+    shipType = 3
+    horizontal = !horizontal
   }
 
-  def slided(): Unit = {
-    init(bsGame);
-    bsGame.refresh(slider.getValue.toInt)
-    println(slider.getValue.toString)
-    println(slider.getValue.toInt.toString)
-  }
-
-  def loadGame(): Unit = {
-    val path = Paths.get("target/BattleShipProtobuf.bin")
-    val in = Files.newInputStream(path)
-
-    val protoGame: BattleShipProtobuf.BattleShipGame = BattleShipProtobuf.BattleShipGame.parseFrom(in)
-    val a = BattleShipGame(convert(protoGame).battleField, getCellWidth, getCellHeight, appendLog, updateSlider)
-    a.clickedCells = convert(protoGame).clickedCells
-    init(a)
-    println("Read Game from disc")
-    bsGame.refresh(bsGame.clickedCells.length)
-    slider.setMax(bsGame.clickedCells.length)
+  def finishEdit(): Unit = {
+      tcp.sendEditFin()
+      val t = new java.util.Timer()
+      val task = new java.util.TimerTask {
+        def run() = {
+          if (tcp.readyRead) {
+            tcp.read()
+            this.cancel()
+          }
+        }
+      }
+    t.schedule(task, 1000)
   }
 
   override def initialize(url: URL, rb: ResourceBundle): Unit = initGame()
@@ -65,15 +72,6 @@ class BattleShipFxController extends Initializable {
 
   def appendLog(message: String): Unit = log.appendText(message + "\n")
 
-  /**
-    * Create a new game.
-    *
-    * This means
-    *
-    * - resetting all cells to 'empty' state
-    * - placing your ships at random on the battleground
-    *
-    */
   def init(game : BattleShipGame) : Unit = {
     bsGame = game
     battleGroundGridPane.getChildren.clear()
@@ -83,25 +81,28 @@ class BattleShipFxController extends Initializable {
     game.getCells().foreach(c => c.init)
   }
 
-  private def updateSlider(x:Int):Unit = {
-    slider.setMax(x)
-    slider.setValue(x)
-    println("x:" ++ x.toString())
-  }
-
-
   private def initGame(): Unit = {
-    val game: BattleShipGame = createGame()
+    val game: BattleShipGame = initEdit()
     init(game)
-    appendLog("New game started.")
   }
 
-  private def createGame(): BattleShipGame = {
-    val field = BattleField(10, 10, Fleet(FleetConfig.Standard))
-
+  private def initEdit():BattleShipGame = {
+    val field = BattleField(10, 10, Fleet.Empty)
     val battleField: BattleField = BattleField.placeRandomly(field)
+    BattleShipGame(getCellWidth, getCellHeight)
+  }
 
-    BattleShipGame(battleField, getCellWidth, getCellHeight, appendLog, updateSlider)
+  def onClickEdit():Boolean ={
+    //bsGame.
+    true
+  }
+
+  def onReceive(msg:String):Unit ={
+    msg match {
+      case "finE" => {
+
+      }
+    }
   }
 
 }

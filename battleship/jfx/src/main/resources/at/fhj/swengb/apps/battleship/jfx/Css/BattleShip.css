@@ -41,13 +41,47 @@
 
 
 .gridpane {
-    -fx-background-color:#CFF6F4;
-    -fx-border-color:#0014ED;
+    -fx-background-color:rgba(0, 0, 0, 0.0);
 }
 .battleship{
     -fx-background-image: url("../Bilder/abgenutzte-holzplanken-textur-001.jpg");
+    -fx-background-size: stretch;
+        -fx-background-repeat: no-repeat;
 }
 
 .splashscreen_background {
-    -fx-background-image: url("../Bilder/splash.jpg")
+    -fx-background-image: url("../Bilder/menu.jpg");
+    -fx-background-size: stretch;
+        -fx-background-repeat: no-repeat;
+}
+.battleshipgame{
+-fx-background-image: url("../Bilder/play2.jpg");
+-fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+}
+.backgroundmenue{
+-fx-background-image: url("../Bilder/menu.jpg");
+-fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+}
+
+.button_ship1{
+    -fx-background-image: url("../Bilder/ship1_button.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+}
+.button_ship2{
+    -fx-background-image: url("../Bilder/ship2_BUTTON.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+}
+.button_ship3{
+    -fx-background-image: url("../Bilder/ship3_button.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+}
+.battleshipedit{
+    -fx-background-image: url("../Bilder/edit.jpg");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
 }
