@@ -9,14 +9,14 @@
 | Actual Hours
 | Description
 
-| staudach16, gartnerf15
-| 21.12.17
+| gartnerf15
+| 13.01.18
+| 2
 | 3
-| 5
-| Write Protobuf messages, converter functions and test it
+| Created the Fxml
 
-| staudach16, gartnerf15
-| 21.12.17
+| gartnerf15
+| 15.12.17
 | 2
 | 2
 | implemented load&save button and slider
