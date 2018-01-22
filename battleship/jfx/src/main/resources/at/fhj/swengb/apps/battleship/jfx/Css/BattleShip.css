@@ -85,3 +85,17 @@
     -fx-background-size: stretch;
     -fx-background-repeat: no-repeat;
 }
+
+.end{
+       -fx-background-image: url("../Bilder/end.jpg");
+       -fx-background-size: stretch;
+       -fx-background-repeat: no-repeat;
+
+ }
+
+ .connect{
+          -fx-background-image: url("../Bilder/connect.jpg");
+           -fx-background-size: stretch;
+           -fx-background-repeat: no-repeat;
+
+ }
