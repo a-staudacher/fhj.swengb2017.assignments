@@ -68,8 +68,11 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Button fx:id="bt_abandon" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" text="Abandon" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label fx:id="lb_my_ship1" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="bt_abandon" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" text="Finish" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="lb_my_ship1" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
             <Label fx:id="lb_my_ship2" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="lb_my_ship3" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <ImageView fitHeight="24.0" fitWidth="24.0" GridPane.rowIndex="1">
@@ -82,7 +85,7 @@
                   <Image url="@../Bilder/ship2.PNG" />
                </image>
             </ImageView>
-            <ImageView fitHeight="25.0" fitWidth="73.0" GridPane.rowIndex="3">
+            <ImageView fitHeight="25.0" fitWidth="79.0" GridPane.rowIndex="3">
                <image>
                   <Image url="@../Bilder/ship3.PNG" />
                </image>
@@ -114,7 +117,7 @@
                </font></Label>
             <Label fx:id="lb_enemy_ship2" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="lb_enemy_ship3" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ImageView fitHeight="24.0" fitWidth="24.0" GridPane.rowIndex="1">
+            <ImageView fitHeight="29.0" fitWidth="27.0" GridPane.rowIndex="1">
                <image>
                   <Image url="@../Bilder/ship1.png" />
                </image>
