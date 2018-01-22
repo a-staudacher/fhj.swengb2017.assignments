@@ -97,5 +97,22 @@
           -fx-background-image: url("../Bilder/connect.jpg");
            -fx-background-size: stretch;
            -fx-background-repeat: no-repeat;
-
  }
+
+ .credits{
+           -fx-background-image: url("../Bilder/credits.jpg");
+            -fx-background-size: stretch;
+            -fx-background-repeat: no-repeat;
+  }
+
+  .highscore{
+             -fx-background-image: url("../Bilder/highscore.jpg");
+              -fx-background-size: stretch;
+              -fx-background-repeat: no-repeat;
+    }
+
+  .replay{
+             -fx-background-image: url("../Bilder/replay.jpg");
+              -fx-background-size: stretch;
+              -fx-background-repeat: no-repeat;
+    }

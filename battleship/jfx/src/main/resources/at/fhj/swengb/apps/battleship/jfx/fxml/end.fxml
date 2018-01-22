@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="540.0" prefWidth="752.0" style="-fx-background-image: ../Bilder/abgenutzte-holzplanken-textur-001.jpg;" styleClass="end" stylesheets="@../Css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxEndController">
+<BorderPane prefHeight="540.0" prefWidth="752.0" styleClass="end" stylesheets="@../Css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxController">
     <right>
 
 
@@ -19,7 +19,7 @@
          <children>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="511.0" prefWidth="722.0">
                <children>
-                  <Button fx:id="button11" layoutX="533.0" layoutY="409.0" onAction="#backMenu" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK" />
+                  <Button fx:id="btBack" layoutX="558.0" layoutY="459.0" onAction="#btnBack" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@BattleShip.css" text="BACK" />
                </children>
             </Pane>
          </children>

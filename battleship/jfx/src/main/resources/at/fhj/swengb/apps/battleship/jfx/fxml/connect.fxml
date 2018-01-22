@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorInput?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -21,7 +21,7 @@
          <children>
             <Pane layoutX="6.0" layoutY="15.0" prefHeight="511.0" prefWidth="722.0">
                <children>
-                  <Button fx:id="btnBack" layoutX="566.0" layoutY="470.0" onAction="#backMenu" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK">
+                  <Button fx:id="btBack" layoutX="566.0" layoutY="470.0" onAction="#btnBack" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK">
                      <font>
                         <Font size="13.0" />
                      </font></Button>
@@ -35,13 +35,13 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtipaddress" layoutX="334.0" layoutY="149.0" />
-                  <Button fx:id="btnStartConnection" layoutX="310.0" layoutY="212.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" styleClass="button2" text="Start Connection">
+                  <TextField fx:id="txipaddress" layoutX="334.0" layoutY="149.0" onAction="#txtipaddress" />
+                  <Button fx:id="btStartConnection" layoutX="310.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnStartConnection" prefHeight="44.0" prefWidth="123.0" styleClass="button2" text="Start Connection">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnHost" layoutX="326.0" layoutY="288.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="90.0" text="HOST">
+                  <Button fx:id="btHost" layoutX="326.0" layoutY="288.0" mnemonicParsing="false" onAction="#btnHost" prefHeight="44.0" prefWidth="90.0" text="HOST">
                      <styleClass>
                         <String fx:value="button_ship1" />
                         <String fx:value="button1" />
@@ -50,9 +50,14 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Button>
-                  <Label fx:id="lblLoad" layoutX="27.0" layoutY="476.0" text="Wating for player">
+                  <Label fx:id="lbLoad" layoutX="27.0" layoutY="476.0" onDragDetected="#lblLoad" text="Wating for player">
                      <font>
                         <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="192.0" layoutY="-11.0" prefHeight="51.0" prefWidth="359.0" text="                CONNECT" textFill="#e1b74c">
+                     <font>
+                        <Font size="27.0" />
                      </font>
                   </Label>
                </children>

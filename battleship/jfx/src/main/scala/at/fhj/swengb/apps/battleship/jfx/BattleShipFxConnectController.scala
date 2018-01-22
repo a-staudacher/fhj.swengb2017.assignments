@@ -15,24 +15,24 @@ import scala.util.{Failure, Success, Try}
 
 
 class BattleShipFxConnectController extends Initializable {
-  @FXML private var connectLabel:TextField =_
+  //@FXML private var lblLoad:TextField =_
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
 
-  def hostButton():Unit = {
+  def btnHost(): Unit = {
     BattleShipFxApp.tcpConnection = TCP("host")
     val scene: Scene = BattleShipFxApp.EditS
-    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+    BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
   }
 
-  def connectButton():Unit = {
-    BattleShipFxApp.tcpConnection = TCP(connectLabel.getText)
+  def btnStartConnection(): Unit = {
+    //BattleShipFxApp.tcpConnection = TCP(lblLoad.getText)
     val scene: Scene = BattleShipFxApp.EditS
-    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+    BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
   }
 
-  def backButton():Unit = {
+  def btnBack(): Unit = {
     val scene: Scene = BattleShipFxApp.MenuS
-    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+    BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
   }
 
 }
