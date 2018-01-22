@@ -85,3 +85,7 @@
     -fx-background-size: stretch;
     -fx-background-repeat: no-repeat;
 }
+.splash_logo{
+    -fx-background-image: url("../Bilder/splash_logo.png");
+    -fx-background-repeat: no-repeat;
+}
