@@ -17,7 +17,7 @@ class BattleShipFxMenueController extends Initializable {
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
   def bt_newgame(): Unit = {
     println("test")
-    val scene: Scene = BattleShipFxApp.EditS
+    val scene: Scene = BattleShipFxApp.ConnectS
     BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
   }
 
