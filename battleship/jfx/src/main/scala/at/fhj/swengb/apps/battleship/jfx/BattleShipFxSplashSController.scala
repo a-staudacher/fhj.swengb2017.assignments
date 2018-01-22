@@ -15,4 +15,8 @@ import scala.util.{Failure, Success, Try}
 
 class BattleShipFxSplashSController extends Initializable {
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
+  def btn_splash():Unit = {
+    val scene: Scene = BattleShipFxApp.MenuS
+    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+  }
 }
