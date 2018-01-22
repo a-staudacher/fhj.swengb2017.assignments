@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="540.0" prefWidth="752.0" style="-fx-background-image: ../Bilder/abgenutzte-holzplanken-textur-001.jpg;" styleClass="connect" stylesheets="@../Css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxController">
+<BorderPane prefHeight="540.0" prefWidth="752.0" style="-fx-background-image: ../Bilder/abgenutzte-holzplanken-textur-001.jpg;" styleClass="connect" stylesheets="@../Css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxConnectController">
     <right>
 
 
@@ -21,7 +21,7 @@
          <children>
             <Pane layoutX="6.0" layoutY="15.0" prefHeight="511.0" prefWidth="722.0">
                <children>
-                  <Button fx:id="btnBack" layoutX="566.0" layoutY="470.0" onAction="#backMenu" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@BattleShip.css" text="BACK">
+                  <Button fx:id="btnBack" layoutX="566.0" layoutY="470.0" onAction="#backMenu" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK">
                      <font>
                         <Font size="13.0" />
                      </font></Button>
