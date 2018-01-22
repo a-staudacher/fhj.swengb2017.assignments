@@ -2,47 +2,30 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="540.0" prefWidth="752.0" styleClass="battleship" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxController">
+<BorderPane prefHeight="540.0" prefWidth="752.0" style="-fx-background-image: ../Bilder/abgenutzte-holzplanken-textur-001.jpg;" styleClass="end" stylesheets="@../Css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxEndController">
     <right>
 
 
     </right>
-    <top>
-        <Label prefHeight="51.0" prefWidth="359.0" text="Battleship" textFill="#e1b74c" BorderPane.alignment="CENTER">
-            <font>
-                <Font size="27.0" />
-            </font>
-        </Label>
-    </top>
     <right>
-        <VBox prefHeight="392.0" prefWidth="138.0" BorderPane.alignment="CENTER">
-            <children>
-                <Button fx:id="button" onAction="#newGame" prefHeight="27.0" prefWidth="142.0" styleClass="button1" text="New Game">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin></Button>
-            <Button fx:id="button1" onAction="#loadGame" prefHeight="27.0" prefWidth="142.0" styleClass="button2" stylesheets="@BattleShip.css" text="Load Game">
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin></Button>
-            <Button fx:id="button11" onAction="#saveGame" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@BattleShip.css" text="Save Game">
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin></Button>
-            </children>
-        </VBox>
+        <VBox prefHeight="392.0" prefWidth="138.0" BorderPane.alignment="CENTER" />
     </right>
-   <left>
-        <TextArea fx:id="log" prefHeight="489.0" prefWidth="128.0" BorderPane.alignment="CENTER" />
-   </left>
-   <bottom>
-      <Slider fx:id="slider" max="1.0" onMouseDragged="#slided" prefHeight="69.0" prefWidth="752.0" value="1.0" BorderPane.alignment="CENTER" />
-   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="511.0" prefWidth="722.0">
+               <children>
+                  <Button fx:id="button11" layoutX="533.0" layoutY="409.0" onAction="#backMenu" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </BorderPane>
