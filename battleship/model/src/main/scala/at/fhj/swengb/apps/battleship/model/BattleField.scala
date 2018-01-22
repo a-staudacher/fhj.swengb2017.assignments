@@ -57,6 +57,7 @@ case class BattleField(width: Int, height: Int, fleet: Fleet) {
 
   }
 
+  //def setShip()
 
   /**
     * All positions in this battlefield

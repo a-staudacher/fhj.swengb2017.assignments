@@ -31,11 +31,11 @@
                <VBox.margin>
                   <Insets />
                </VBox.margin></Button>
-            <Button fx:id="button1" onAction="#loadGame" prefHeight="27.0" prefWidth="142.0" styleClass="button2" stylesheets="@BattleShip.css" text="Load Game">
+            <Button fx:id="button1" onAction="#loadGame" prefHeight="27.0" prefWidth="142.0" styleClass="button2" stylesheets="@../Css/BattleShip.css" text="Load Game">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin></Button>
-            <Button fx:id="button11" onAction="#saveGame" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@BattleShip.css" text="Save Game">
+            <Button fx:id="button11" onAction="#saveGame" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="Save Game">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin></Button>
@@ -43,7 +43,7 @@
         </VBox>
     </right>
     <center>
-        <GridPane fx:id="battleGroundGridPane" alignment="CENTER" hgap="5.0" styleClass="gridpane" stylesheets="@BattleShip.css" vgap="5.0" BorderPane.alignment="CENTER">
+        <GridPane fx:id="battleGroundGridPane" alignment="CENTER" hgap="5.0" styleClass="gridpane" stylesheets="@../Css/BattleShip.css" vgap="5.0" BorderPane.alignment="CENTER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />

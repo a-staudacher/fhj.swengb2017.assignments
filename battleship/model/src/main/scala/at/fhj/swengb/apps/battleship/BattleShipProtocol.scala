@@ -1,17 +1,16 @@
 package at.fhj.swengb.apps.battleship
 
-import java.{lang, util}
+import at.fhj.swengb.apps.battleship.model._
 
 import scala.collection.JavaConverters._
-import at.fhj.swengb.apps.battleship.model._
 
 object BattleShipProtocol {
 
   def convert(g : BattleShipGame) : BattleShipProtobuf.BattleShipGame = BattleShipProtobuf.BattleShipGame.newBuilder()
         .setBattleField(BattleShipProtobuf.BattleField.newBuilder()
-            .setWidth(g.battleField.width)
-            .setHeight(g.battleField.height)
-            .setFleet(BattleShipProtobuf.Fleet.newBuilder().addAllVessel(g.battleField.fleet.vessels.map(convert).toIterable.asJava).build())
+            .setWidth(g.myBattleField.width)
+            .setHeight(g.myBattleField.height)
+            .setFleet(BattleShipProtobuf.Fleet.newBuilder().addAllVessel(g.myBattleField.fleet.vessels.map(convert).toIterable.asJava).build())
           .build())
           .addAllClickedCells(g.clickedCells.map(convert).toIterable.asJava)
     .build()
@@ -21,7 +20,7 @@ object BattleShipProtocol {
     val height = g.getBattleField.getHeight
     val fleet = g.getBattleField.getFleet.getVesselList.asScala.map(convert).toSet
     val battleField: BattleField = BattleField(width,height,Fleet(fleet))
-    val game = BattleShipGame(battleField, ((x:Int) => x.toDouble), ((x:Int) => x.toDouble),(x=>()), (x=>()))
+    val game = BattleShipGame(((x:Int) => x.toDouble), ((x:Int) => x.toDouble))
     g.getClickedCellsList.asScala.map(convert).foreach(game.hit)
     game
   }

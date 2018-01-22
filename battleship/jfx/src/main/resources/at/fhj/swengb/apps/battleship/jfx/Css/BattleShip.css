@@ -45,5 +45,9 @@
     -fx-border-color:#0014ED;
 }
 .battleship{
-    -fx-background-image: url("abgenutzte-holzplanken-textur-001.jpg");
+    -fx-background-image: url("../Bilder/abgenutzte-holzplanken-textur-001.jpg");
+}
+
+.splashscreen_background {
+    -fx-background-image: url("../Bilder/splash.jpg")
 }
