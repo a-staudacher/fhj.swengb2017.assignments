@@ -1,9 +1,8 @@
 package at.fhj.swengb.apps.battleship
 
-import java.{lang, util}
+import at.fhj.swengb.apps.battleship.model._
 
 import scala.collection.JavaConverters._
-import at.fhj.swengb.apps.battleship.model._
 
 object BattleShipProtocol {
 
