@@ -16,22 +16,33 @@
 | Created the Fxml
 
 | gartnerf15
-| 15.12.17
+| 15.01.11
 | 2
-| 2
-| implemented load&save button and slider
+| 3
+| implemented Buttons
 
 | gartnerf15
-| 21.12.17
-| 2
-| 2
+| 18.01.18
+| 3
+| 4
 | CSS
 
-| staudach16
-| 21.12.17
-| 2
-| 2
-| Some Bugfixing
+| gartnerf15
+| 20.01.18
+| 3
+| 5
+| Redesign Layout
 
+| gartnerf15
+| 21.01.18
+| 1
+| 3
+| CSS
+
+| gartnerf15
+| 22.01.18
+| 1
+| 1
+| Inserted Titles
 
 |===
