@@ -53,14 +53,14 @@ class BattleShipFxApp extends Application {
 
     BattleShipFxApp.rootStage = stage
     //BattleShipFxApp.loadScene(BattleShipFxApp.SplashS,BattleShipFxApp.rootStage)
-    BattleShipFxApp.loadScene(BattleShipFxApp.SplashS,BattleShipFxApp.rootStage)
+    BattleShipFxApp.loadScene(BattleShipFxApp.EditS,BattleShipFxApp.rootStage)
   }
   override def init(): Unit = {
     BattleShipFxApp.SplashS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipsplaschscreen.fxml")
     BattleShipFxApp.MenuS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
     BattleShipFxApp.ConnectS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
     BattleShipFxApp.EditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipedit.fxml")
-    BattleShipFxApp.GameS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/game.fxml")
+    //BattleShipFxApp.GameS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipplay.fxml")
     //BattleShipFxApp.EndS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipend.fxml")
     //BattleShipFxApp.HighscoreS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
     //BattleShipFxApp.ReplayS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")

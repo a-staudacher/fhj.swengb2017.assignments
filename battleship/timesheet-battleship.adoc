@@ -9,29 +9,16 @@
 | Actual Hours
 | Description
 
-| gartnerf15
-| 13.01.18
-| 2
-| 3
-| Created the Fxml
-
-| gartnerf15
-| 15.12.17
-| 2
-| 2
-| implemented load&save button and slider
-
-| gartnerf15
-| 21.12.17
-| 2
-| 2
-| CSS
+| staudach16
+| 18.1.18
+|
+| 3.5
+| Research and write TCP
 
 | staudach16
-| 21.12.17
-| 2
-| 2
-| Some Bugfixing
-
+| 19.1.18
+|
+| 6
+| Create fxml controller concept
 
 |===
