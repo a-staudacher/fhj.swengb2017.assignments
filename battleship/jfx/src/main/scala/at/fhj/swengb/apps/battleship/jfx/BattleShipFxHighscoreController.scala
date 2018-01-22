@@ -22,8 +22,8 @@ class BattleShipFxHighscoreController extends Initializable {
 
   override def initialize(url: URL, rb: ResourceBundle): Unit = {
   //  val in = Source.fromFile("highscoreFile.csv").getLines().toList
-    path = Paths.get("target/highscoreFile.csv")
-    outstream = new BufferedReader(new InputStreamReader((Files.newInputStream(path))))
+  //  path = Paths.get("target/highscoreFile.csv")
+  //  outstream = new BufferedReader(new InputStreamReader((Files.newInputStream(path))))
   }
   def loadGame():Unit = {}
 
@@ -40,6 +40,21 @@ class BattleShipFxHighscoreController extends Initializable {
       println(line)
       line=outstream.readLine()
     }
+  }
+  def btnClick1():Unit = {}
+  def btnClick2():Unit = {}
+  def btnClick3():Unit = {}
+  def btnClick4():Unit = {}
+  def btClick5():Unit = {}
+  def btClick6():Unit = {}
+  def btClick7():Unit = {}
+  def btClick8():Unit = {}
+  def btClick9():Unit = {}
+  def btClick10():Unit = {}
+
+  def btnBack():Unit = {
+    val scene: Scene = BattleShipFxApp.MenuS
+    BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
   }
 
   def bt_credits():Unit = {}

@@ -25,6 +25,7 @@ class BattleShipFxEditController extends Initializable {
 
 
   override def initialize(url: URL, rb: ResourceBundle): Unit = {
+    println("init Edit")
     BattleShipGame.editMode = true
     initGameField()
     BattleShipGame.nrShip1 = 3
@@ -50,6 +51,8 @@ class BattleShipFxEditController extends Initializable {
     changeBtn(btn_ship3)
   }
   def bt_back() :Unit = {
+    val scene: Scene = BattleShipFxApp.MenuS
+    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
   }
 
   def changeBtn(button: Button):Unit = {
