@@ -9,18 +9,6 @@
 | Actual Hours
 | Description
 
-| staudach16
-| 18.1.18
-|
-| 3.5
-| Research and write TCP
-
-| staudach16
-| 19.1.18
-|
-| 6
-| Create fxml controller concept
-
 | hutterma14
 | 20.1.18
 | 3
