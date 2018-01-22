@@ -1,8 +1,5 @@
 package at.fhj.swengb.apps.battleship.model
 
-import javafx.event.Event
-import javafx.scene.input.MouseEvent
-
 /**
   * Contains all information about a battleship game.
   */
