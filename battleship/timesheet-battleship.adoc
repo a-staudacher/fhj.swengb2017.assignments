@@ -21,4 +21,16 @@
 | 6
 | Create fxml controller concept
 
+| hutterma14
+| 20.1.18
+|
+| 5
+| working on highscore
+
+| hutterma14
+| 22.1.18
+|
+| 2
+| highscore testfile
+
 |===
