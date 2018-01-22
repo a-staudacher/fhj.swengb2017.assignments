@@ -34,6 +34,12 @@
 | Redesign Layout
 
 | gartnerf15
+| 20.01.18
+| 3
+| 5
+| Working on Highscore
+
+| gartnerf15
 | 21.01.18
 | 1
 | 3
@@ -44,5 +50,15 @@
 | 1
 | 1
 | Inserted Titles
+
+| gartnerf15
+| 22.01.18
+| 2
+| 2
+| Highscore Testfile
+
+
+
+
 
 |===
