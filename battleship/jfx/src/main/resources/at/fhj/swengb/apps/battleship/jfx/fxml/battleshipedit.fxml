@@ -46,11 +46,11 @@
                      </font></Label>
                   <Label fx:id="lb_ship2" text="2" textFill="WHITE" GridPane.rowIndex="1">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font></Label>
                   <Label fx:id="lb_ship3" text="1" textFill="WHITE" GridPane.rowIndex="2">
                      <font>
-                        <Font size="13.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font></Label>
                   <Button fx:id="btn_ship1" minHeight="0.0" mnemonicParsing="false" onAction="#bt_ship1" prefHeight="30.0" prefWidth="30.0" styleClass="button_ship1" GridPane.columnIndex="1">
                      <GridPane.margin>
@@ -63,7 +63,7 @@
             </GridPane>
             <Label fx:id="lb_positon" prefHeight="25.0" prefWidth="138.0" text="Position" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
             <GridPane prefHeight="107.0" prefWidth="138.0">
