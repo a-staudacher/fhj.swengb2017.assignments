@@ -62,7 +62,7 @@ class BattleShipFxApp extends Application {
     BattleShipFxApp.EditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipedit.fxml")
     BattleShipFxApp.GameS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/game.fxml")
     //BattleShipFxApp.EndS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipend.fxml")
-    //BattleShipFxApp.HighscoreS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
+    BattleShipFxApp.HighscoreS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
     //BattleShipFxApp.ReplayS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
     //BattleShipFxApp.CreditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
   }

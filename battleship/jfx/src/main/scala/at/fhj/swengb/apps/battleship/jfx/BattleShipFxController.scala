@@ -64,6 +64,16 @@ class BattleShipFxController extends Initializable {
     t.schedule(task, 1000)
   }
 
+  def writeHighscore() : Unit ={
+    if (Files.exists(Paths.get("target/highscore.csv"))) {
+
+    }
+  }
+
+  def loadHighscore() : Unit ={
+
+  }
+
   override def initialize(url: URL, rb: ResourceBundle): Unit = initGame()
 
   private def getCellHeight(y: Int): Double = battleGroundGridPane.getRowConstraints.get(y).getPrefHeight
