@@ -1,5 +1,6 @@
 package at.fhj.swengb.apps.battleship.model
 
+
 object battlenamesGenerator {
   val adjective = List ("Disastrous", "Legendary", "Lost","Devastating", "Minor","Hostile","Traditional","Small","Enormous", "Gigantic")
     val noun = List ("fight", "battle", "combat","massacre","challenge","meeting","mock battle","sham fight", "games","competition")
