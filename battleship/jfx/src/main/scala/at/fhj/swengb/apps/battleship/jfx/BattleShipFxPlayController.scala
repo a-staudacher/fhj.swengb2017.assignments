@@ -15,4 +15,5 @@ import scala.util.{Failure, Success, Try}
 
 class BattleShipFxPlayController extends Initializable {
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
+  def btn_finish():Unit={}
 }

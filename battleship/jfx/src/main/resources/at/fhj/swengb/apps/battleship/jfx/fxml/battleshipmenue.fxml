@@ -20,14 +20,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btn_newgame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#bt_newgame" prefHeight="34.0" prefWidth="208.0" text="New Game" />
-            <Button fx:id="btn_highscore" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#bt_highscore" prefHeight="34.0" prefWidth="208.0" text="Highscore" GridPane.rowIndex="1" />
-            <Button fx:id="btn_credits" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#bt_credits" prefHeight="34.0" prefWidth="208.0" text="Credits" GridPane.rowIndex="2" />
+            <Button fx:id="btn_newgame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#bt_newgame" prefHeight="34.0" prefWidth="208.0" styleClass="btc_newgame" stylesheets="@../Css/BattleShip.css" text="New Game" />
+            <Button fx:id="btn_highscore" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#bt_highscore" prefHeight="34.0" prefWidth="208.0" styleClass="btc_highscore" stylesheets="@../Css/BattleShip.css" text="Highscore" GridPane.rowIndex="1" />
+            <Button fx:id="btn_credits" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#bt_credits" prefHeight="34.0" prefWidth="208.0" styleClass="btc_credits" stylesheets="@../Css/BattleShip.css" text="Credits" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </center>
    <top>
-      <Label alignment="CENTER" prefHeight="105.0" prefWidth="176.0" text="MENU" textFill="#d3b51d" BorderPane.alignment="CENTER">
+      <Label alignment="CENTER" prefHeight="96.0" prefWidth="164.0" text="MENU" textFill="#d3b51d" BorderPane.alignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
