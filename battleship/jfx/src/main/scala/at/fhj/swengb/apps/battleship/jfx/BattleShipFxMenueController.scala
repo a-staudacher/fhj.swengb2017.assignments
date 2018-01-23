@@ -15,6 +15,7 @@ import scala.util.{Failure, Success, Try}
 
 class BattleShipFxMenueController extends Initializable {
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
+
   def bt_newgame(): Unit = {
   println("test")
   val scene: Scene = BattleShipFxApp.ConnectS
@@ -26,5 +27,8 @@ class BattleShipFxMenueController extends Initializable {
   BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
 }
 
-  def bt_credits():Unit = {}
+  def bt_credits():Unit = {
+    val scene: Scene = BattleShipFxApp.CreditS
+    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+  }
 }

@@ -15,4 +15,11 @@ import scala.util.{Failure, Success, Try}
 
 class BattleShipFxReplayController extends Initializable {
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
+  def btnBack():Unit = {
+    val scene: Scene = BattleShipFxApp.HighscoreS
+    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+  }
+  def slided():Unit={
+
+  }
 }

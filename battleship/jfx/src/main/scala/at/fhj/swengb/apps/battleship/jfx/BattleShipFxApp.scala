@@ -6,7 +6,7 @@ import javafx.scene.{Parent, Scene}
 import javafx.stage.Stage
 
 import at.fhj.swengb.apps.battleship.TCP
-import at.fhj.swengb.apps.battleship.model.{BattleField, BattleShipGame}
+import at.fhj.swengb.apps.battleship.model.{BattleField, BattleShipGame, enemyBattleShip}
 
 import scala.util.{Failure, Success, Try}
 
@@ -22,8 +22,9 @@ object BattleShipFxApp {
   var ReplayS: Scene = _
   var CreditS: Scene = _
   var bsGame: BattleShipGame = _
-  //val enemyBattleField: BattleField = _
+  var enemyBattleField: enemyBattleShip = _
   var tcpConnection : TCP = _
+  var gameName:String =_
 
   def main(args: Array[String]): Unit = {
     Application.launch(classOf[BattleShipFxApp], args: _*)
@@ -34,7 +35,7 @@ object BattleShipFxApp {
     stage.show()
   }
 
-  private def readFXML(file: String): Scene = {
+  def readFXML(file: String): Scene = {
     val scene: Scene = new Scene(FXMLLoader.load[Parent](getClass.getResource(file)))
 
     scene.getStylesheets.clear()
@@ -60,10 +61,10 @@ class BattleShipFxApp extends Application {
     BattleShipFxApp.MenuS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
     BattleShipFxApp.ConnectS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/connect.fxml")
     BattleShipFxApp.EditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipedit.fxml")
-    BattleShipFxApp.GameS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/game.fxml")
+    //BattleShipFxApp.GameS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/game.fxml")
     //BattleShipFxApp.EndS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipend.fxml")
     BattleShipFxApp.HighscoreS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/highscore.fxml")
-    //BattleShipFxApp.ReplayS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
-    //BattleShipFxApp.CreditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipmenue.fxml")
+    BattleShipFxApp.ReplayS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/replay.fxml")
+    BattleShipFxApp.CreditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/credits.fxml")
   }
 }

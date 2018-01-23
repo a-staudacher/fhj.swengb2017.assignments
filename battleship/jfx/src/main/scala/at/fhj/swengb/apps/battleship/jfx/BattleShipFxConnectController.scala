@@ -4,6 +4,7 @@ import java.net.URL
 import java.util.ResourceBundle
 import javafx.fxml.{FXML, FXMLLoader, Initializable}
 import javafx.scene.control.TextField
+import javafx.scene.control.Label
 import javafx.scene.layout.GridPane
 import javafx.scene.{Parent, Scene}
 import javafx.stage.Stage
@@ -15,17 +16,26 @@ import scala.util.{Failure, Success, Try}
 
 
 class BattleShipFxConnectController extends Initializable {
-  //@FXML private var lblLoad:TextField =_
+  @FXML private var txipaddress:TextField =_
+  @FXML private var lblLoad:Label =_
+
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
 
   def btnHost(): Unit = {
+    println("host")
     BattleShipFxApp.tcpConnection = TCP("host")
+    println("player connected")
+    BattleShipFxApp.EditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipedit.fxml")
     val scene: Scene = BattleShipFxApp.EditS
     BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
+    //lblLoad.setText("Waiting for player")
   }
 
   def btnStartConnection(): Unit = {
-    //BattleShipFxApp.tcpConnection = TCP(lblLoad.getText)
+    println("connect to" ++ txipaddress.getText())
+    println("connected")
+    BattleShipFxApp.tcpConnection = TCP(txipaddress.getText)
+    BattleShipFxApp.EditS = BattleShipFxApp.readFXML("/at/fhj/swengb/apps/battleship/jfx/fxml/battleshipedit.fxml")
     val scene: Scene = BattleShipFxApp.EditS
     BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
   }

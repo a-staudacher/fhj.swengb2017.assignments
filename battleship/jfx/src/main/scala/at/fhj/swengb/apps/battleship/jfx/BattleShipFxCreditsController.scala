@@ -15,4 +15,8 @@ import scala.util.{Failure, Success, Try}
 
 class BattleShipFxCreditsController extends Initializable {
   override def initialize(url: URL, rb: ResourceBundle): Unit = {}
+  def btnBack():Unit = {
+    val scene: Scene = BattleShipFxApp.MenuS
+    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+  }
 }

@@ -43,6 +43,16 @@ case class BattleFxCell(pos: BattlePos
     if(BattleShipGame.editMode) {
       placeVessel(pos)
     }
+    else
+      {
+        someVessel match {
+          case None =>
+            setFill(Color.AQUAMARINE)
+          case Some(v) =>
+            fn(v, pos)
+            setFill(Color.RED)
+        }
+      }
   })
 
 }

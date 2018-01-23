@@ -24,7 +24,7 @@
         </Label>
     </top>
     <center>
-        <GridPane fx:id="battleGroundGridPane" alignment="CENTER" hgap="5.0" styleClass="gridpane" stylesheets="@../Css/BattleShip.css" vgap="5.0" BorderPane.alignment="CENTER">
+        <GridPane fx:id="battlePlayGroundGridPane" alignment="CENTER" hgap="5.0" styleClass="gridpane" stylesheets="@../Css/BattleShip.css" vgap="5.0" BorderPane.alignment="CENTER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />

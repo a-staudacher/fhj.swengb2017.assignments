@@ -29,48 +29,51 @@ import javafx.scene.control.TableColumn
 
 class BattleShipFxHighscoreController extends Initializable {
 
-  var num
-  var title = _
-  var score = _
+  //  var num =_
+  //var title = _
+  //var score = _
 
   var path: Path = _
   var outstream: BufferedReader = _
   var tableView : Unit = _
 
   override def initialize(url: URL, rb: ResourceBundle): Unit = {
-    val in = Source.fromFile("highscoreFile.csv").getLines().toList
-    path = Paths.get("target/highscoreFile.csv")
-    outstream = new BufferedReader(new InputStreamReader((Files.newInputStream(path))))
+//    val in = Source.fromFile("highscoreFile.csv").getLines().toList
+//    path = Paths.get("target/highscoreFile.csv")
+//    outstream = new BufferedReader(new InputStreamReader((Files.newInputStream(path))))
   }
 
   def bt_highscore():Unit= {
-    var line = outstream.readLine().toArray[String]
-    while(line != null)
-    {
-      title = line(0)
-      score = line(1)
-      num = ???
+  //  var line = outstream.readLine().toArray[String]
+  //  while(line != null)
+  //  {
+  //    title = line(0)
+  //    score = line(1)
+  //    num = ???
 
-     tableView.getColumn("title")
+  //   tableView.getColumn("title")
 
-    }
+  //  }
   }
-  def btnClick1():Unit = {}
-  def btnClick2():Unit = {}
-  def btnClick3():Unit = {}
-  def btnClick4():Unit = {}
-  def btClick5():Unit = {}
-  def btClick6():Unit = {}
-  def btClick7():Unit = {}
-  def btClick8():Unit = {}
-  def btClick9():Unit = {}
-  def btClick10():Unit = {}
+  def btnClick1():Unit = loadReplay()
+  def btnClick2():Unit = loadReplay()
+  def btnClick3():Unit = loadReplay()
+  def btnClick4():Unit = loadReplay()
+  def btClick5():Unit = loadReplay()
+  def btClick6():Unit = loadReplay()
+  def btClick7():Unit = loadReplay()
+  def btClick8():Unit = loadReplay()
+  def btClick9():Unit = loadReplay()
+  def btClick10():Unit = loadReplay()
 
   def btnBack():Unit = {
     val scene: Scene = BattleShipFxApp.MenuS
     BattleShipFxApp.loadScene(scene, BattleShipFxApp.rootStage)
   }
 
-  def bt_credits():Unit = {}
+  def loadReplay():Unit = {
+    val scene: Scene = BattleShipFxApp.ReplayS
+    BattleShipFxApp.loadScene(scene,BattleShipFxApp.rootStage)
+  }
 }
 
