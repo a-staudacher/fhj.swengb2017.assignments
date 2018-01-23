@@ -31,6 +31,8 @@ case class BattleFXGameCell(pos: BattlePos
       a match {
         case "1" => {
           println("treffer")
+          //dont know why color doesnt update first, the blocking call
+          //is in afterClick
           setFill(Color.RED)
           afterClick(1)
 
