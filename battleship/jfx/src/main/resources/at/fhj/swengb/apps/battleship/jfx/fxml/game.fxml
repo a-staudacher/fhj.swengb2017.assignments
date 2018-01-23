@@ -17,9 +17,9 @@
 
     </right>
     <top>
-        <Label fx:id="lb_player" alignment="CENTER" prefHeight="51.0" prefWidth="359.0" text="Spieler" textFill="#e1b74c" BorderPane.alignment="CENTER">
+        <Label fx:id="lb_player" alignment="CENTER" prefHeight="51.0" prefWidth="456.0" text="Spieler" textFill="#e1b74c" BorderPane.alignment="CENTER">
             <font>
-                <Font name="System Bold" size="27.0" />
+                <Font name="System Bold" size="23.0" />
             </font>
         </Label>
     </top>
