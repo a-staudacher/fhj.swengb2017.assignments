@@ -21,10 +21,4 @@
 | 6
 | Create fxml controller concept
 
-| staudach16
-| 21.1.18
-|
-| 3
-| Edit Mode working
-
 |===
