@@ -10,18 +10,150 @@
 | Description
 
 | staudach16
+| 13.1.18
+| 3
+| 3
+| Initial Planing
+
+| staudach16
 | 18.1.18
-|
-| 3.5
+| 3
+| 4
 | Research and write TCP
 
 | staudach16
 | 19.1.18
-|
+| 3
 | 6
 | Create fxml controller concept
 
-|reichelt16
+| staudach16
+| 21.1.18
+| 7
+| 5
+| Edit Mode working
+
+| staudach16
+| 23.1.18
+| 5
+| 9
+| GameFlow and finishing touches
+
+| gartnerf15
+| 12.01.18
+| 1
+| 2
+| First draft of the mockup
+
+| gartnerf15
+| 13.01.18
+| 2
+| 3
+| Created the Fxml
+
+| gartnerf15
+| 15.01.11
+| 2
+| 3
+| implemented Buttons
+
+| gartnerf15
+| 18.01.18
+| 2
+| 3
+| CSS
+
+| gartnerf15
+| 20.01.18
+| 1
+| 2
+| Redesign Layout
+
+| gartnerf15
+| 20.01.18
+| 2
+| 3
+| Working on Highscore
+
+| gartnerf15
+| 21.01.18
+| 1
+| 2
+| CSS
+
+| gartnerf15
+| 22.01.18
+| 1
+| 1
+| Inserted Titles
+
+| gartnerf15
+| 22.01.18
+| 2
+| 2
+| Highscore Testfile
+
+| hutterma14
+| 20.1.18
+| 3
+| 5
+| working on highscore
+
+| hutterma14
+| 21.1.18
+| 3
+| 4
+| Edit Mode Working
+
+| hutterma14
+| 22.1.18
+| 3
+| 5
+| highscore testfile
+
+| hutterma14
+| 23.1.18
+| 4
+| 7
+| highscore troubleshooting
+
+| schmitze16
+| 13.1.18
+| 2
+| 8
+| Creation of Mockup, Editing Splash Arts in Photoshop
+
+| schmitze16
+| 15.1.18
+| 2
+| 5
+| Implemention of Fxml and CSS Structure
+
+| schmitze16
+| 19.1.18
+| 2
+| 6
+| Implemention of Fxml Connect,End
+
+| schmitze16
+| 20.1.18
+| 3
+| 5
+| Implemention of Fxml Credits, Highscore, Replay
+
+| schmitze16
+| 23.1.18
+| 3
+| 4
+| Initial Planing
+
+| reichelt16
+| 13.1.18
+| 3
+| 3
+| Initial Planing
+
+| reichelt16
 | 15.12.2017
 | 2
 | 2
@@ -29,9 +161,15 @@
 
 | reichelt16
 | 22.1.2018
-| 1
-| 1.5
+| 7
+| 5
 | namesGenerator
+
+| reichelt16
+| 20.1.18
+| 6
+| 7
+| Fxml Battledesign
 
 |reichelt16
 | 22.1.2018
@@ -39,5 +177,4 @@
 | 2
 | Manual
 
-
-===
+|===
