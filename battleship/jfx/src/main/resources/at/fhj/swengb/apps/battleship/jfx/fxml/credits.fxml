@@ -1,48 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="540.0" prefWidth="752.0" styleClass="battleship" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxCreditsController">
+<BorderPane prefHeight="540.0" prefWidth="752.0" styleClass="credits" stylesheets="@../Css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhj.swengb.apps.battleship.jfx.BattleShipFxCreditsController">
     <right>
 
 
     </right>
     <top>
-        <Label prefHeight="51.0" prefWidth="359.0" text="Battleship" textFill="#e1b74c" BorderPane.alignment="CENTER">
+        <Label prefHeight="51.0" prefWidth="359.0" text="                 Credits" textFill="#e1b74c" BorderPane.alignment="CENTER">
             <font>
-                <Font size="27.0" />
+                <Font name="System Bold" size="27.0" />
             </font>
         </Label>
     </top>
-    <right>
-        <VBox prefHeight="392.0" prefWidth="138.0" BorderPane.alignment="CENTER">
-            <children>
-                <Button fx:id="button" onAction="#newGame" prefHeight="27.0" prefWidth="142.0" styleClass="button1" text="New Game">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin></Button>
-            <Button fx:id="button1" onAction="#loadGame" prefHeight="27.0" prefWidth="142.0" styleClass="button2" stylesheets="@../Css/BattleShip.css" text="Load Game">
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin></Button>
-            <Button fx:id="button11" onAction="#saveGame" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@BattleShip.css" text="Save Game">
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin></Button>
-            </children>
-        </VBox>
-    </right>
-   <left>
-        <TextArea fx:id="log" prefHeight="489.0" prefWidth="128.0" BorderPane.alignment="CENTER" />
-   </left>
-   <bottom>
-      <Slider fx:id="slider" max="1.0" onMouseDragged="#slided" prefHeight="69.0" prefWidth="752.0" value="1.0" BorderPane.alignment="CENTER" />
-   </bottom>
+   <right>
+      <Pane prefHeight="489.0" prefWidth="320.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btBack" layoutX="180.0" layoutY="439.0" onAction="#btnBack" prefHeight="27.0" prefWidth="115.0" style="-fx-background-radius: 10px;" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="Back">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+              <TextArea fx:id="log" layoutX="21.0" layoutY="21.0" opacity="0.65" prefHeight="443.0" prefWidth="388.0" />
+            <Pane layoutX="65.0" layoutY="332.0" prefHeight="83.0" prefWidth="293.0" styleClass="appearLogoFH" stylesheets="@../Css/BattleShip.css" />
+            <Label layoutX="119.0" layoutY="39.0" text="Project: BATTLESHIP">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="91.0" text="Team Leader/Code Specialist:  Staudacher Andreas">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="128.0" text="GUI Designer/Programmer:  Gartner Florian">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="160.0" text="Edit/Highscore Mode Programmer:  Hutter Martin">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="199.0" text="Creation Programmer :  Reichel Thurid">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="233.0" text="Co GUI Designer/Programmer :  Schmitzer Georg">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
 </BorderPane>

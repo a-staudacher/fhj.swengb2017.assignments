@@ -20,6 +20,8 @@
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="511.0" prefWidth="722.0">
                <children>
                   <Button fx:id="btBack" layoutX="558.0" layoutY="459.0" onAction="#btnBack" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@BattleShip.css" text="BACK" />
+                  <Pane layoutX="40.0" layoutY="93.0" opacity="0.91" prefHeight="128.0" prefWidth="357.0" styleClass="appearWin" stylesheets="@../Css/BattleShip.css" />
+                  <Pane layoutX="40.0" layoutY="256.0" opacity="0.91" prefHeight="128.0" prefWidth="357.0" styleClass="appearLose" stylesheets="@../Css/BattleShip.css" />
                </children>
             </Pane>
          </children>

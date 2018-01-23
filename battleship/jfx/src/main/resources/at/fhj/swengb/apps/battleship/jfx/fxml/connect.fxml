@@ -21,7 +21,7 @@
          <children>
             <Pane layoutX="6.0" layoutY="15.0" prefHeight="511.0" prefWidth="722.0">
                <children>
-                  <Button fx:id="btBack" layoutX="566.0" layoutY="470.0" onAction="#btnBack" prefHeight="27.0" prefWidth="142.0" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK">
+                  <Button fx:id="btBack" layoutX="566.0" layoutY="470.0" onAction="#btnBack" prefHeight="27.0" prefWidth="142.0" style="-fx-background-radius: 10px;" styleClass="button3" stylesheets="@../Css/BattleShip.css" text="BACK">
                      <font>
                         <Font size="13.0" />
                      </font></Button>
@@ -57,7 +57,7 @@
                   </Label>
                   <Label layoutX="192.0" layoutY="-11.0" prefHeight="51.0" prefWidth="359.0" text="                CONNECT" textFill="#e1b74c">
                      <font>
-                        <Font size="27.0" />
+                        <Font name="System Bold" size="27.0" />
                      </font>
                   </Label>
                </children>

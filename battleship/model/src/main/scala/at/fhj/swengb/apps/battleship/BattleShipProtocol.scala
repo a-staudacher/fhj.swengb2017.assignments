@@ -5,7 +5,7 @@ import at.fhj.swengb.apps.battleship.model._
 import scala.collection.JavaConverters._
 
 object BattleShipProtocol {
-
+/*
   def convert(g : BattleShipGame) : BattleShipProtobuf.BattleShipGame = BattleShipProtobuf.BattleShipGame.newBuilder()
         .setBattleField(BattleShipProtobuf.BattleField.newBuilder()
             .setWidth(g.myBattleField.width)
@@ -49,5 +49,5 @@ object BattleShipProtocol {
   }
 
   def convert(pos: BattlePos): BattleShipProtobuf.Pos = BattleShipProtobuf.Pos.newBuilder().setX(pos.x).setY(pos.y).build()
-  def convert(pos: BattleShipProtobuf.Pos) : BattlePos = BattlePos(pos.getX,pos.getY)
+  def convert(pos: BattleShipProtobuf.Pos) : BattlePos = BattlePos(pos.getX,pos.getY)*/
 }

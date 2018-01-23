@@ -90,8 +90,26 @@
        -fx-background-image: url("../Bilder/end.jpg");
        -fx-background-size: stretch;
        -fx-background-repeat: no-repeat;
-
  }
+
+ .appearWin{
+       -fx-background-image: url("../Bilder/win.png");
+       -fx-background-size: stretch;
+       -fx-background-repeat: no-repeat;
+ }
+
+  .appearLose{
+        -fx-background-image: url("../Bilder/lose.png");
+        -fx-background-size: stretch;
+        -fx-background-repeat: no-repeat;
+  }
+
+  .appearLogoFH{
+          -fx-background-image: url("../Bilder/credits_logo.png");
+          -fx-background-size: stretch;
+          -fx-background-repeat: no-repeat;
+    }
+
 
  .connect{
           -fx-background-image: url("../Bilder/connect.jpg");
